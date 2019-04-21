@@ -1,0 +1,35 @@
+PODS:
+  - PhoneNumberKit (2.6.0):
+    - PhoneNumberKit/PhoneNumberKitCore (= 2.6.0)
+    - PhoneNumberKit/UIKit (= 2.6.0)
+  - PhoneNumberKit/PhoneNumberKitCore (2.6.0)
+  - PhoneNumberKit/UIKit (2.6.0):
+    - PhoneNumberKit/PhoneNumberKitCore
+  - Realm (3.13.1):
+    - Realm/Headers (= 3.13.1)
+  - Realm/Headers (3.13.1)
+  - RealmSwift (3.13.1):
+    - Realm (= 3.13.1)
+  - Stripe (14.0.0)
+
+DEPENDENCIES:
+  - PhoneNumberKit (~> 2.6)
+  - RealmSwift
+  - Stripe
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PhoneNumberKit
+    - Realm
+    - RealmSwift
+    - Stripe
+
+SPEC CHECKSUMS:
+  PhoneNumberKit: 167ee1f0bbb6efce7c62559e620eae745595532f
+  Realm: 50071da38fe079e0735e47c9f2eae738c68c5996
+  RealmSwift: 8a1e6a02b7a08cd17a31e3115143fb69fe5f3fb9
+  Stripe: db29ad197c74aca6fb981e4e8355cf7ebd0fca5a
+
+PODFILE CHECKSUM: 98d683f6f8b84663bef2a77266bd95922439af68
+
+COCOAPODS: 1.6.0

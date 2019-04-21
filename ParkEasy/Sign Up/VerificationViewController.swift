@@ -10,7 +10,6 @@ import UIKit
 
 class VerificationViewController: UIViewController {
 
-    
     @IBOutlet weak var textInputView: UITextField!
     
     @IBOutlet weak var userPhoneNumberLabel: UILabel!

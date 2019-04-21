@@ -10,14 +10,35 @@ import UIKit
 
 class MyVehiclesViewController: UIViewController {
 
+    enum Mode {
+        case selection
+        case normal
+        
+    }
+    
+    var mode: Mode = .normal
+    
+    var onDismiss = { }
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var addButton: UIBarButtonItem!
+    
+    
     var vehicles: [Vehicle]?
+    var selectedVehicle: Vehicle?
+    
     let storageManager = StorageManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    
     }
+    
+    @IBAction func dismissVC(_ sender: Any) {
+        onDismiss()
+        self.navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -106,4 +127,26 @@ extension MyVehiclesViewController: UITableViewDelegate, UITableViewDataSource {
             
         }
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if mode == .selection {
+            
+            let vehicle = vehicles?[indexPath.row]
+            
+            self.selectedVehicle = vehicle
+            
+            onDismiss()
+            
+            self.navigationController?.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let vc = segue.destination as? BookingViewController {
+        
+        vc.selectedVehicle = self.selectedVehicle
+    }
+  }
 }

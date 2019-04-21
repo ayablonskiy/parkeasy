@@ -7,15 +7,65 @@
 //
 
 import UIKit
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    func isUserLoggedIn() -> Bool {
+        
+        let storageManager = StorageManager()
+        
+        return storageManager.fetchUser() != nil
+    }
+    
+    func openMap() {
+        
+        let viewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
+    }
+    
+    func requestNotificationAccess() {
+        
+        let center = UNUserNotificationCenter.current()
+        
+        let options: UNAuthorizationOptions = [.alert, .sound]
+        
+        center.requestAuthorization(options: options) { (success, error) in
+            print("User has granted notifications access: \(success)")
+        }
+    }
 
+    static func scheduleLocalNotification(triggerDate: Date, title: String, message: String) {
+        
+        let center = UNUserNotificationCenter.current()
+        
+        let content = UNMutableNotificationContent()
+        
+        content.body = message
+        content.title = title
+        content.sound = UNNotificationSound.default
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: triggerDate), repeats: false)
 
+        let request = UNNotificationRequest(identifier: "Booking \(triggerDate)", content: content, trigger: trigger)
+        
+        center.add(request, withCompletionHandler: nil)
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        requestNotificationAccess()
+        
+        if isUserLoggedIn() {
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            window?.rootViewController = storyboard.instantiateInitialViewController()
+            window?.makeKeyAndVisible()
+        }
+        
         return true
     }
 

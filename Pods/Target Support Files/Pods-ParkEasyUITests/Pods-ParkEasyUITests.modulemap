@@ -1,0 +1,6 @@
+framework module Pods_ParkEasyUITests {
+  umbrella header "Pods-ParkEasyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

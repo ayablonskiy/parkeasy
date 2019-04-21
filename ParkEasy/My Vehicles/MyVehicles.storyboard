@@ -57,7 +57,7 @@
                         <barButtonItem key="leftBarButtonItem" systemItem="stop" id="T57-U2-t2t">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
-                                <action selector="dismiss:" destination="fTE-Sh-WxS" id="7LK-DA-Xpu"/>
+                                <action selector="dismissVC:" destination="fTE-Sh-WxS" id="tVx-9m-d3U"/>
                             </connections>
                         </barButtonItem>
                         <rightBarButtonItems>
@@ -76,6 +76,7 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addButton" destination="oXX-Kf-DK0" id="x8K-HJ-XUt"/>
                         <outlet property="tableView" destination="8mh-bd-6Qo" id="rIc-ZO-vII"/>
                     </connections>
                 </viewController>

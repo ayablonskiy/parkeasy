@@ -9,4 +9,21 @@ import UIKit
 
 class storageManager: NSObject {
 
+    func savePhoneNumber(number: String) {
+        
+        
+    }
+    
+    func saveFirstName(firstName: String) {
+        
+    }
+    
+    func saveLastName(lastName: String) {
+        
+    }
+    
+    func savePaymentMethod() {
+    }
+    
 }
+

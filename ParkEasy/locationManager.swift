@@ -7,7 +7,23 @@
 //
 
 import UIKit
+import CoreLocation
 
-class locationManager: NSObject {
+class LocationManager: NSObject {
 
+    let locationManager = CLLocationManager()
+    
+    func requestPermission() {
+        
+        switch CLLocationManager.authorizationStatus() {
+            
+        case .notDetermined:
+            
+            locationManager.requestWhenInUseAuthorization()
+            
+        default:
+            
+            break
+        }        
+    }
 }
