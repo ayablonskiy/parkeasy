@@ -78,7 +78,7 @@ class BookingViewController: UIViewController {
         
         guard (isLimitlessParking && !isVehicleInActiveSession && selectedVehicle != nil) || (selectedVehicle != nil && !isVehicleInActiveSession) else {
             
-            let alert = UIAlertController(title: isVehicleInActiveSession ? "Please select a different vehicle" : "Please fill in necessary information", message: "Please solve issues before continuing", preferredStyle: .alert)
+            let alert = UIAlertController(title: isVehicleInActiveSession ? "Please select a different vehicle" : "Please select a vehicle", message: "Please solve issues before continuing", preferredStyle: .alert)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
             self.present(alert, animated: true, completion: nil)

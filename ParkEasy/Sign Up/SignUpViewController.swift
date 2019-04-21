@@ -57,7 +57,6 @@ class SignUpViewController: UIViewController {
             
         catch {
             return false
-            print("Generic parser error")
         }
     }
     
