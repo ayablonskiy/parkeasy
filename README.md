@@ -1,7 +1,7 @@
 # parkeasy
 
 
-Install ParkEasy step by step guide
+Install ParkEasy on an iPhone step by step guide
 
 1. Download Xcode
 2. Clone the GitHub repository ( https://github.com/ayablonskiy/parkeasy )  to a local folder on your device (MAC)
