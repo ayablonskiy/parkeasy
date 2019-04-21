@@ -6,8 +6,8 @@
 //  Copyright © 2019 Yablonskiy Alexey. All rights reserved.
 //
 
-import UIKit
-import PhoneNumberKit
+import UIKit //Apple UI framework / library used for displaying UI elements and interacting with them
+import PhoneNumberKit //Phone number validation library installed via CocoaPods. USed to validate and format phone numbers for the verification / registration of users
 
 struct userDetailDataType {
     

@@ -6,8 +6,8 @@
 //  Copyright © 2019 Yablonskiy Alexey. All rights reserved.
 //
 
-import UIKit
-import MapKit  //Handles all the maps for the app
+import UIKit //Apple UI framework / library used for displaying UI elements and interacting with them
+import MapKit  //Apple framework that allows to handle and interact with the Map
 
 
 class MapViewController: UIViewController, CLLocationManagerDelegate {

@@ -6,8 +6,8 @@
 //  Copyright © 2019 Yablonskiy Alexey. All rights reserved.
 //
 
-import UIKit
-import CoreLocation
+import UIKit //Apple UI framework / library used for displaying UI elements and interacting with them
+import CoreLocation //Apple library used for location services
 
 class Network: NSObject {
     
