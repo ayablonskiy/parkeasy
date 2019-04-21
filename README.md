@@ -24,7 +24,7 @@ Install ParkEasy on an iPhone step by step guide
 
 IF the Error message does not pop up in Xcode to Trust developer follow these instructions
 
-1. Setting on your iPhone
+1. Settinga on your iPhone
 2. General 
 3. Device Management
 4. Then select your developer account and press trust developer
