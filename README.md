@@ -13,7 +13,7 @@ Install ParkEasy on an iPhone step by step guide
 8. Change the Bundle Identifier field to something unique (com.ParkEasy.ParkEasyYourNameHere)
 9. Tap 'Team' under the 'Signing' section
 10. Select Add Account 
-11. Log in USing your Apple ID (or create an Apple ID alternatively)
+11. Log in Using your Apple ID (or create an Apple ID alternatively)
 12. Close the window and select your apple ID in the drop down list in the Team tab
 13. Connect your iPhone device to your computer
 14. Unlock your device
