@@ -71,7 +71,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     }
 }
 //Externsion of view controller which complies with MMapViewDelegate protocol
-//We will be implementing delegate in this extension
+//I will be implementing delegate in this extension
 extension MapViewController: MKMapViewDelegate {
     
     func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {

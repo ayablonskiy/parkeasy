@@ -161,10 +161,6 @@ extension BookingViewController: UITableViewDelegate, UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: BookingDurationTableViewCell.identifier) as! BookingDurationTableViewCell
             
-//            cell.notificationDateChangedAction = { [weak self] (date: Date) -> Void in
-//                
-//                self?.notificationDate = date
-//            }
             
             cell.endDateChangedAction = { [weak self] (date: Date) -> Void in
                 
